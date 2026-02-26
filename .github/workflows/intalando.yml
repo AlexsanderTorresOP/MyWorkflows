@@ -1,4 +1,4 @@
-name: Primeiro Workflow Com Input
+name: Primeiro Workflow Com Install
 on:
   push:
     branches: [ "main" ]
