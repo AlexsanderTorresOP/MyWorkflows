@@ -1,0 +1,15 @@
+name: Primeiro Workflow Com Input
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  PrimeiroJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testando Input
+        run: |
+          sudo apt install git
+          git -v
