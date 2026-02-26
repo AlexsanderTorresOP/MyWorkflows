@@ -1,0 +1,20 @@
+name: Primeiro Workflow
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+      inputs:
+        LAB_SECRET: 
+          description: Chave do Laboratorio
+          required: true
+  
+jobs:
+  PrimeiroJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testando Input
+        run: |
+          echo Roando pela ${{ github.run_number }} vez!
+          echo CHAVE DO LAB: ${{ github.event.inputs.LAB_SECRET }}
