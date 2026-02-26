@@ -9,7 +9,7 @@ jobs:
   PrimeiroJob:
     runs-on: ubuntu-latest
     steps:
-      - name: Testando Input
+      - name: Testando Install
         run: |
           sudo apt install git
           git -v
