@@ -1,0 +1,20 @@
+name: Primeiro Workflow
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rodando Cript de Uma Linha
+        run: echo Meu Primeiro Workflw
+
+      - name: Rodando Script de Varias Linhas
+        run: |
+          echo Da pra fazer em mais de uma linha ! :D
+          echo Olha só que doideira !
