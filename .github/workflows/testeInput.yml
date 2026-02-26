@@ -1,4 +1,4 @@
-name: Primeiro Workflow
+name: Primeiro Workflow Com Input
 on:
   push:
     branches: [ "main" ]
@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
       inputs:
-        LAB_SECRET: 
+        Primeiro-Input: 
           description: Chave do Laboratorio
           required: true
   
@@ -17,4 +17,4 @@ jobs:
       - name: Testando Input
         run: |
           echo Roando pela ${{ github.run_number }} vez!
-          echo CHAVE DO LAB: ${{ github.event.inputs.LAB_SECRET }}
+          echo CHAVE DO LAB: ${{ github.event.inputs.Primeiro-Input }}
