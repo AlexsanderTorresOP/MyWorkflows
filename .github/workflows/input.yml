@@ -17,4 +17,4 @@ jobs:
       - name: Testando Input
         run: |
           echo Roando pela ${{ github.run_number }} vez!
-          echo CHAVE DO LAB: ${{ github.event.inputs.Primeiro-Input }}
+          echo CONTEUDO DO INPUT: ${{ github.event.inputs.Primeiro-Input }}
